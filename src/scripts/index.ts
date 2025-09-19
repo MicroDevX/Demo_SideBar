@@ -30,4 +30,3 @@ const items: Item[] = [
 sidebarContent.processData(items).forEach(item => {
     sidebar?.appendChild(item);
 })
-
