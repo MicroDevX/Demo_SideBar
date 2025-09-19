@@ -65,6 +65,7 @@ body {
     align-items: center;
     gap: 5px;
     transition: 1s;
+    user-select: none;
 }
 
 .sidebar:hover {
