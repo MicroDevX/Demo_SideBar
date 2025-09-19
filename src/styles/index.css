@@ -1,0 +1,123 @@
+:root {
+    padding: 0;
+    margin: 0;
+
+    --main-borderRadius: 8px;
+
+    --main-bg-color: #b9b9b9;
+    --main-text-color: #2c2c2c;
+    --secend-bg-color: #e2e2e2;
+    --secend-text-color: #444;
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../Fonts/FiraCode_NerdFont/FiraCodeNerdFont-Regular.ttf') format('truetype');
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #2c2c2c;
+        --main-text-color: #b9b9b9;
+
+        --secend-bg-color: #444;
+        --secend-text-color: #e2e2e2;
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: #b9b9b9;
+        --main-text-color: #2c2c2c;
+
+        --secend-bg-color: #e2e2e2;
+        --secend-text-color: #444;
+    }
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.sidebar {
+    background-color: var(--secend-bg-color);
+    color: var(--secend-text-color);
+    border-radius: var(--main-borderRadius);
+    width: 64px;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    transition: 1s;
+}
+
+.sidebar:hover {
+    width: 350px;
+    margin: 0px 0px 0px 6px;
+    transition: 1s;
+}
+
+.LogoContainer {
+    width: 90%;
+    height: 64px;
+    cursor: pointer;
+    display: flex;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    text-shadow: 4px 2px 10px black;
+}
+
+.Logo {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    filter: drop-shadow(2px 1px 2px #000);
+}
+
+.CTreeView {
+    width: 88%;
+    height: 54px;
+    cursor: pointer;
+    display: flex;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    border: 1px solid var(--secend-text-color);
+    border-radius: 8px;
+}
+
+.TreeViewItemLogo {
+    font-size: 24px;
+    margin-left: 17px;
+}
+.TreeViewItemTitle{
+    font-size: 24px;
+}
+
+.displaycontent {
+    background-color: var(--secend-bg-color);
+    color: var(--secend-text-color);
+    border-radius: var(--main-borderRadius);
+    width: calc(98% - 64px);
+    height: 98%;
+}

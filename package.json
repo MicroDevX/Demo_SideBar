@@ -1,0 +1,27 @@
+{
+  "name": "demosidebar",
+  "version": "1.0.0",
+  "description": "Demo_SideBar",
+  "main": "./src/scripts/index.ts",
+  "scripts": {
+        "start": "ts-node src/index.ts",
+        "debug": "node --inspect -r ts-node/register src/index.ts",
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "microdevx",
+    "github",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "Demo_SideBar",
+    "Sidebar"
+  ],
+  "author": "microdevx",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
