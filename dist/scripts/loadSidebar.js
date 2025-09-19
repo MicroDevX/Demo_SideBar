@@ -19,22 +19,24 @@ export function LoadLogo() { return LogoContainer; }
 const seperator = document.createElement("hr");
 seperator.style.width = "90%";
 export function seperatorLine() { return seperator; }
-//---------------------------------------
-const CTreeView = document.createElement("div");
-CTreeView.classList.add("CTreeView");
-const LogoCTreeView = document.createElement("p");
-LogoCTreeView.classList.add("TreeViewItemLogo");
-const TitleCTreeView = document.createElement("p");
-TitleCTreeView.classList.add("TreeViewItemTitle");
-CTreeView.appendChild(LogoCTreeView);
-CTreeView.appendChild(TitleCTreeView);
-export function NewTreeViewItem(Contnet, GlyphIcon, task, Title = Contnet) {
-    CTreeView.title = Contnet;
-    CTreeView.addEventListener("click", task);
-    LogoCTreeView.innerText = GlyphIcon;
-    LogoCTreeView.style.fontFamily = "FiraCode";
-    TitleCTreeView.innerText = Contnet;
-    return CTreeView;
+export function processData(data) {
+    const treeViews = [];
+    data.forEach(item => {
+        const CTreeView = document.createElement("div");
+        CTreeView.classList.add("CTreeView");
+        const LogoCTreeView = document.createElement("p");
+        LogoCTreeView.classList.add("TreeViewItemLogo");
+        const TitleCTreeView = document.createElement("p");
+        TitleCTreeView.classList.add("TreeViewItemTitle");
+        CTreeView.appendChild(LogoCTreeView);
+        CTreeView.appendChild(TitleCTreeView);
+        CTreeView.title = item.Content;
+        CTreeView.addEventListener("click", item.onclick);
+        LogoCTreeView.innerText = item.GlyphIcon;
+        LogoCTreeView.style.fontFamily = "FiraCode";
+        TitleCTreeView.innerText = item.Content;
+        treeViews.push(CTreeView);
+    });
+    return treeViews;
 }
-;
 //# sourceMappingURL=loadSidebar.js.map

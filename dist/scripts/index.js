@@ -2,6 +2,21 @@ import * as sidebarContent from "./loadSidebar.js";
 const sidebar = document.getElementById("sidebar");
 sidebar?.appendChild(sidebarContent.LoadLogo());
 sidebar?.appendChild(sidebarContent.seperatorLine());
-sidebar?.appendChild(sidebarContent.NewTreeViewItem("Home", "\uF4E2", () => { }));
-sidebar?.appendChild(sidebarContent.NewTreeViewItem("Trash", "\uF1F8", () => { }));
+const items = [
+    {
+        Content: "Home",
+        GlyphIcon: "\uF4E2",
+        onclick: () => console.log("Dome"),
+        Title: "Home"
+    },
+    {
+        Content: "Trash",
+        GlyphIcon: "\uF1F8",
+        onclick: () => console.log("Done"),
+        Title: "Trash"
+    }
+];
+sidebarContent.processData(items).forEach(item => {
+    sidebar?.appendChild(item);
+});
 //# sourceMappingURL=index.js.map

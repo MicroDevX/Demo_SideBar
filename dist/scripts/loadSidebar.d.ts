@@ -1,4 +1,11 @@
 export declare function LoadLogo(): HTMLDivElement;
 export declare function seperatorLine(): HTMLHRElement;
-export declare function NewTreeViewItem(Contnet: string, GlyphIcon: string, task: () => void, Title?: string): HTMLDivElement;
+type Item = {
+    Content: string;
+    GlyphIcon: string;
+    onclick: () => void;
+    Title: string;
+};
+export declare function processData(data: Array<Item>): HTMLDivElement[];
+export {};
 //# sourceMappingURL=loadSidebar.d.ts.map
